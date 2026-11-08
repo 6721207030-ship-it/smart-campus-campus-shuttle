@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Shuttle - ระบบตารางเดินรถรับส่ง</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+  CAMPUS <span>SHUTTLE</span>
+  <span class="logo-badge">LIVE TRACK</span>
+</a>
+      <nav aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="index.html" class="active">หน้าแรก</a></li>
+          <li><a href="routes.html">สายรถ</a></li>
+          <li><a href="timetable.html">ตารางเวลา</a></li>
+          <li><a href="planner.html">วางแผนเดินทาง</a></li>
+          <li><a href="feedback.html">แจ้งปัญหา</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-btn" type="button">โหมดมืด</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="global-error" class="alert-error" role="alert"></div>
+    <h1>ระบบตรวจสอบตารางเดินรถในมหาวิทยาลัย</h1>
+    <p class="subtitle">เช็กเวลารถรับส่งรอบมหาวิทยาลัย วางแผนเวลาเดินทางได้ง่ายและแม่นยำ</p>
+
+    <div class="grid grid-2">
+      <section aria-labelledby="live-heading">
+        <div class="card">
+          <h2 id="live-heading" class="card-title">🔍 ดูเวลารถคันถัดไปตามจุดจอด</h2>
+          <div class="form-group">
+            <label for="quick-stop-select">เลือกจุดจอดที่ต้องการ:</label>
+            <select id="quick-stop-select">
+              <option value="">กำลังโหลดข้อมูลจุดจอด...</option>
+            </select>
+          </div>
+          <div id="live-info-container"></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="fav-heading">
+        <h2 id="fav-heading" style="font-size:1.25rem; margin-bottom:0.75rem;">⭐ จุดจอดโปรดของฉัน</h2>
+        <div id="favorites-container">กำลังโหลดข้อมูล...</div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Campus Shuttle - Mini Project SC17332 กลุ่มที่ 8</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

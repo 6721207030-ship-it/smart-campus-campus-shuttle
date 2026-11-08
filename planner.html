@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>วางแผนการเดินทาง - Campus Shuttle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+  CAMPUS <span>SHUTTLE</span>
+  <span class="logo-badge">LIVE TRACK</span>
+</a>
+      <nav aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="routes.html">สายรถ</a></li>
+          <li><a href="timetable.html">ตารางเวลา</a></li>
+          <li><a href="planner.html" class="active">วางแผนเดินทาง</a></li>
+          <li><a href="feedback.html">แจ้งปัญหา</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-btn" type="button">โหมดมืด</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>วางแผนการเดินทางในมหาวิทยาลัย</h1>
+    <p class="subtitle">ค้นหาสายรถที่ผ่าน และประเมินเวลาเดินทางล่วงหน้า</p>
+
+    <div class="card" style="max-width:650px; margin:0 auto;">
+      <div class="form-group">
+        <label for="planner-origin">จุดเริ่มต้น (ต้นทาง):</label>
+        <select id="planner-origin" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="planner-dest">จุดหมาย (ปลายทาง):</label>
+        <select id="planner-dest" required></select>
+      </div>
+
+      <button id="btn-plan" class="btn" type="button">ค้นหาเส้นทางที่ดีที่สุด</button>
+      <div id="planner-result" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Campus Shuttle - Mini Project SC17332 กลุ่มที่ 8</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

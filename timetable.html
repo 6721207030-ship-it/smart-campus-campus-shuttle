@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตารางเวลาเดินรถเต็ม - Campus Shuttle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+  CAMPUS <span>SHUTTLE</span>
+  <span class="logo-badge">LIVE TRACK</span>
+</a>
+      <nav aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="routes.html">สายรถ</a></li>
+          <li><a href="timetable.html" class="active">ตารางเวลา</a></li>
+          <li><a href="planner.html">วางแผนเดินทาง</a></li>
+          <li><a href="feedback.html">แจ้งปัญหา</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-btn" type="button">โหมดมืด</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>ตารางเวลาเดินรถฉบับเต็ม</h1>
+    <p class="subtitle">เลือกสายรถและประเภทวัน เพื่อดูเที่ยววิ่งทั้งหมดของวัน</p>
+
+    <div class="card" style="margin-bottom:1.5rem;">
+      <div class="form-group">
+        <label for="table-route-select">เลือกสายรถ:</label>
+        <select id="table-route-select"></select>
+      </div>
+
+      <fieldset style="border:none; padding:0;">
+        <legend style="font-weight:600; margin-bottom:0.35rem;">ประเภทวันเดินทาง:</legend>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="day-type" value="weekday" checked> วันธรรมดา (จันทร์ - ศุกร์)
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="day-type" value="weekend"> วันหยุด (เสาร์ - อาทิตย์)
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <section id="timetable-result" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Campus Shuttle - Mini Project SC17332 กลุ่มที่ 8</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
